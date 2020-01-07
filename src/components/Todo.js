@@ -80,7 +80,8 @@ export default class Todo extends Component {
                 onDelete={this.handleDelete} 
                 items={this.state.items} />
 
-        <Counter />
+        <Counter items={this.state.items}/>
+        
         <form onSubmit={this.handleSubmit}>
           <input
             className="form-control mb-4"

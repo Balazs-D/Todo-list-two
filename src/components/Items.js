@@ -1,6 +1,5 @@
 import React from 'react';
 import '../styles/Items.scss';
-import { tsStringKeyword } from '@babel/types';
 
 export default function Items(props) {
   //console.log(props)
