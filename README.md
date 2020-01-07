@@ -8,7 +8,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ### Description
 
 
-This is a simple application to create a to do list. 
+Its a simple application to create a to do list. 
 
 ### Features
 
