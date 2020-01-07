@@ -22,7 +22,10 @@ export default function Items(props) {
             >
               {item.status ?  'Done' : 'ToDo'}
             </span>
-          </div>
+
+<span 
+onClick={() => props.onDelete(item.id)}
+className="close ml-4">&times;</span>          </div>
         </div>
       ))}
     </div>

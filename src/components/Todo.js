@@ -21,29 +21,16 @@ export default class Todo extends Component {
     localStorage.setItem('todo-app', JSON.stringify(items));
   }
 
-  // handleSubmit = event => {
-  //
 
-  //   const newItem = {
-  //     id: Date.now(),
-  //     text: this.state.newItem.trim(),
-  //     status: false,
-  //   }
+  
 
-  //   if (newItem !== '')
-  //     this.setState(prevState => ({
-  //       items: [...prevState.items, newItem],
-  //       newItem: ''
-  //     }));
-  // };
-
-  handleChange = event => {
+  handleChange = (event) => {
     this.setState({
       newItem: event.target.value
     });
   };
 
-  handleSubmit = event => {
+  handleSubmit = (event) => {
     // prevent default - no page reload
     event.preventDefault();
     // set the new item to add to array
@@ -62,7 +49,7 @@ export default class Todo extends Component {
       }));
   };
 
-  handleStatus = id => {
+  handleStatus = (id) => {
     console.log(`Status Changing ${id}`);
     const items = this.state.items.map(item => {
       if (item.id === id) {
@@ -73,10 +60,25 @@ export default class Todo extends Component {
     this.setState({ items });
   };
 
+  handleDelete = (id) => {
+    console.log(`Deleting item ${id}`)
+
+    const items = this.state.items.filter(
+      item => item.id !== id 
+    );
+
+    this.setState({items})
+
+    }
+  
+
+  
   render() {
     return (
       <div>
-        <Items onStatus={this.handleStatus} items={this.state.items} />
+        <Items onStatus={this.handleStatus}
+                onDelete={this.handleDelete} 
+                items={this.state.items} />
 
         <Counter />
         <form onSubmit={this.handleSubmit}>
