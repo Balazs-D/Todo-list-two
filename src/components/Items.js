@@ -1,5 +1,6 @@
 import React from 'react';
 import '../styles/Items.scss';
+import { tsStringKeyword } from '@babel/types';
 
 export default function Items(props) {
   //console.log(props)
@@ -10,7 +11,7 @@ export default function Items(props) {
           className="list-group-item d-flex justify-content-between align-item-center"
           key={item.id}
         >
-          <div>{item.text}</div>
+          <div className={item.status ? 'strike' : 'todo-item-text'}>{item.text}</div>
           <div>
             <span
               onClick={() => props.onStatus(item.id)}
@@ -19,7 +20,7 @@ export default function Items(props) {
                 (item.status ? 'badge-success' : 'badge-warning')
               }
             >
-              {item.status ? 'Done' : 'ToDo'}
+              {item.status ?  'Done' : 'ToDo'}
             </span>
           </div>
         </div>
