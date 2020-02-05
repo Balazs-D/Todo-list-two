@@ -19,8 +19,4 @@ Its a simple application to create a to do list.
 
 ### Go to the appllication
 
-[Link to the app](https:/todo-list-two.now.sh "To Do App")
-
-### Check out on ZEIT
-
-[Link to ZEIT](https:https://zeit.co/balazs-d/todo-list-two/1lc4ca4yg "Go to ZEIT")
+[Link to ZEIT](https://todo-list-two.now.sh/ "Go to ZEIT")
